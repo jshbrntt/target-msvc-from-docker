@@ -43,6 +43,40 @@ A working example of a C++ project compiling for Windows from Ubuntu on WSL usin
 
 2.  Run `make`.
 
+    ```shell
+    $ make
+    mkdir -p Step1_build
+    cd Step1_build; cmake -DCMAKE_TOOLCHAIN_FILE=../clang_windows_cross.cmake ../Step1
+    -- The C compiler identification is Clang 12.0.1 with MSVC-like command-line
+    -- The CXX compiler identification is Clang 12.0.1 with MSVC-like command-line
+    -- Detecting C compiler ABI info
+    -- Detecting C compiler ABI info - done
+    -- Check for working C compiler: /usr/bin/clang-cl-12 - skipped
+    -- Detecting C compile features
+    -- Detecting C compile features - done
+    -- Detecting CXX compiler ABI info
+    -- Detecting CXX compiler ABI info - done
+    -- Check for working CXX compiler: /usr/bin/clang-cl-12 - skipped
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: /home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build
+    cd Step1_build; cmake --build .
+    make[1]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[2]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    Scanning dependencies of target Tutorial
+    make[3]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    [ 50%] Building CXX object CMakeFiles/Tutorial.dir/tutorial.cxx.obj
+    [100%] Linking CXX executable Tutorial.exe
+    make[3]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    [100%] Built target Tutorial
+    make[2]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[1]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    ```
+
 3.  Run the resulting `Tutorial.exe` executable in the `Step1_build` directory from WSL (interop) or Windows.
 
     ```shell
