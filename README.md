@@ -61,30 +61,30 @@ A working example of a C++ project compiling for Windows from Ubuntu on WSL usin
     -- Detecting CXX compile features - done
     -- Configuring done
     -- Generating done
-    -- Build files have been written to: /home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build
+    -- Build files have been written to: /home/joshua/cross-compile-for-windows-from-wsl/Step1_build
     cd Step1_build; cmake --build .
-    make[1]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
-    make[2]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
-    make[3]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[1]: Entering directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
+    make[2]: Entering directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Entering directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
     Scanning dependencies of target Tutorial
-    make[3]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
-    make[3]: Entering directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Leaving directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Entering directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
     [ 50%] Building CXX object CMakeFiles/Tutorial.dir/tutorial.cxx.obj
     [100%] Linking CXX executable Tutorial.exe
-    make[3]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[3]: Leaving directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
     [100%] Built target Tutorial
-    make[2]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
-    make[1]: Leaving directory '/home/joshua/projects/cross-compile-for-windows-from-wsl/Step1_build'
+    make[2]: Leaving directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
+    make[1]: Leaving directory '/home/joshua/cross-compile-for-windows-from-wsl/Step1_build'
     ```
 
 3.  Run the resulting `Tutorial.exe` executable in the `Step1_build` directory from WSL (interop) or Windows.
 
     ```shell
-    joshua@wsl:~/projects/cross-compile-example$ ./Step1_build/Tutorial.exe 2
+    joshua@wsl:~/cross-compile-for-windows-from-wsl$ ./Step1_build/Tutorial.exe 2
     The square root of 2 is 1.41421
     ```
 
     ```powershell
-    PS Microsoft.PowerShell.Core\FileSystem::\\wsl.localhost\Ubuntu\home\joshua\projects\cross-compile-example> .\Step1_build\Tutorial.exe 2
+    PS Microsoft.PowerShell.Core\FileSystem::\\wsl.localhost\Ubuntu\home\joshua\cross-compile-for-windows-from-wsl> .\Step1_build\Tutorial.exe 2
     The square root of 2 is 1.41421
     ```
