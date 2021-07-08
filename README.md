@@ -33,7 +33,10 @@ A working example of a C++ project compiling for Windows from Ubuntu on WSL usin
 
 ## Getting Started
 
-1.  Clone this repository.
+1.  Clone this repository (with submodules).
+    ```shell
+    git clone --recursive git@github.com:joshua-barnett/cross-compile-for-windows-from-wsl.git
+    ```
 
 2.  Run `make` (has to be ran 3 times for CMake to pick up the dependencies).
     ```shell
