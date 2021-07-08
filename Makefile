@@ -10,8 +10,8 @@ BUILD_SRC = Step1
 BUILD_DIR = $(BUILD_SRC)_build
 .DEFAULT_GOAL = default
 
-.PHONY: clean
-clean:
+.PHONY: clean-build-dir
+clean-build-dir:
 	rm -rf $(BUILD_DIR)
 
 .PHONY: build-dir
@@ -37,6 +37,10 @@ image:
 .PHONY: run
 run: image
 	docker run --interactive --rm --tty --volume `pwd`:/usr/src --workdir /usr/src windows-cpp-build-tools $(COMMAND)
+
+.PHONY: clean
+clean: COMMAND = make clean-build-dir
+clean: run
 
 .PHONY: shell
 shell: COMMAND = bash
